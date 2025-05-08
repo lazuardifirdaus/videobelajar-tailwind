@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@import "@fontsource/dm-sans/300.css";
+@import "@fontsource/dm-sans/300-italic.css";
+@import "@fontsource/dm-sans/400.css";
+@import "@fontsource/dm-sans/400-italic.css";
+@import "@fontsource/dm-sans/500.css";
+@import "@fontsource/dm-sans/500-italic.css";
+@import "@fontsource/dm-sans/700.css";
+@import "@fontsource/dm-sans/700-italic.css";
+
+@import "@fontsource/open-sans/300.css";
+@import "@fontsource/open-sans/300-italic.css";
+@import "@fontsource/open-sans/400.css";
+@import "@fontsource/open-sans/400-italic.css";
+@import "@fontsource/open-sans/500.css";
+@import "@fontsource/open-sans/500-italic.css";
+@import "@fontsource/open-sans/700.css";
+@import "@fontsource/open-sans/700-italic.css";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@layer utilities {
+    .bg-hero-mobile {
+        background-image: url('../assets/Mobile Assets/Homepage Mobile/Banner/Frame 1000003862.png');
+        background-size: cover;
+        background-position: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        background-blend-mode: multiply;
+    }
+
+    .bg-newsletter {
+        background-image: url('../assets/Mobile Assets/Homepage Mobile/Banner/Banner CTA.png');
+        background-size: cover;
+        background-position: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        background-blend-mode: multiply;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        -moz-scrollbar-width: none;
+        scrollbar-width: none;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+    .font-dm-sans {
+        font-family: "DM Sans", sans-serif;
+    }
+
+    .font-dm-sans-light {
+        font-family: "DM Sans", sans-serif;
+        font-weight: 300;
+    }
+
+    .font-dm-sans-medium {
+        font-family: "DM Sans", sans-serif;
+        font-weight: 500;
+    }
+
+    .font-dm-sans-semi-bold {
+        font-family: "DM Sans", sans-serif;
+        font-weight: 600;
+    }
+
+    .font-open-sans {
+        font-family: "Open Sans", sans-serif;
+    }
+
+    .font-open-sans-light {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+    }
+
+    .font-open-sans-medium {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 500;
+    }
+
+    .font-open-sans-semi-bold {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+    }
+}
+
+@layer components {
+    .card {
+        background-color: var(--color-white);
+        border-radius: var(--rounded-lg);
+        padding: var(--spacing-6);
+        box-shadow: var(--shadow-xl);
+    }
+}
+
+@theme {
+    --color-grey-opacity-70: rgba(51, 51, 51, 70);
+}
