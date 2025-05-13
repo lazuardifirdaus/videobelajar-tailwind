@@ -16,16 +16,16 @@
             <img src="./assets/Logo Assets/Logo.png" alt="Logo Videobelajar" class="w-38 h-10 object-contain">
 
             <!-- Menu (Hamburger Icon) -->
-            <button>
+            <button class="md:hidden">
                 <img src="./assets/Icon Assets (Mobile)/Material Icon.svg" alt="Header Menu">
             </button>
 
             <!-- Kategori & Foto Profil (Desktop) -->
             <div class="hidden md:flex items-end gap-4">
                 <nav>
-                    <ul class="flex gap-4">
+                    <ul class="flex gap-9 items-center">
                         <li>Kategori</li>
-                        <li><img src="./assets/Logo Assets/Foto Profil.png" alt=""></li>
+                        <li><img src="./assets/Avatar Assets/Avatar.svg" alt=""></li>
                     </ul>
                 </nav>
             </div>
@@ -34,35 +34,42 @@
 
     <main class="flex flex-col mx-5">
         <div id="hero-banner"
-            class="bg-hero-mobile mx-auto my-7 px-5 py-9 lg:py-17 rounded-3xl w-full max-w-[1200px] lg:h-100 text-white">
+            class="flex flex-col bg-hero-mobile mx-auto my-7 px-5 py-9 lg:px-36 lg:py-17 rounded-3xl w-full max-w-[1200px] lg:h-full text-white gap-6">
             <div id="copywriting-banner" class="space-y-4">
-                <h4 class="font-[Poppins] font-bold text-2xl lg:text-5xl text-center leading-snug tracking-[-.1px]">
+                <h4
+                    class="font-[Poppins] font-bold text-2xl lg:text-5xl lg:leading-tight text-center leading-snug tracking-[-.1px]">
                     Revolusi Pembelajaran: Temukan Ilmu Baru melalui Platform Video Interaktif!
                 </h4>
-                <p class="font-medium text-gray-200 text-sm text-center leading-[1.5] tracking-[.2px]">
+                <p
+                    class="font-medium text-gray-200 text-sm lg:text-base lg:leading-normal text-center leading-[1.5] tracking-[.2px]">
                     Temukan ilmu baru yang menarik dan mendalam melalui koleksi video pembelajaran berkualitas tinggi.
                     Tidak hanya itu, Anda juga dapat berpartisipasi dalam latihan interaktif yang akan meningkatkan
                     pemahaman Anda.
                 </p>
             </div>
+            <button
+                class="max-w-md h-10.5 py-2.5 px-[8px] text-sm md:py-2.5 md:px-6 lg:font-medium lg:leading-normal lg:tracking-wider lg:w-[372px] self-center bg-[#3ECF4C] rounded-[10px] inline-flex flex-col justify-center items-center cursor-pointer overflow-hidden">
+                Temukan Video Course untuk Dipelajari!
+            </button>
         </div>
 
         <div id="course" class="mx-auto py-6 lg:py-17 w-full max-w-[1200px] h-auto" x-data="{cards: cardInfo}">
-            <div id="collection-title" class="space-y-7">
+            <div id="collection-title" class="space-y-2.5">
                 <h3 class="font-[Poppins] font-medium text-2xl">Koleksi Video Pembelajaran Unggulan</h3>
                 <p class="text-grey-opacity-70 font-medium text-sm leading-[1.5] tracking-[.2px]">
                     Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!</p>
             </div>
-            <div class="overflow-x-auto font-medium text-gray-500 text-sm text-center no-scrollbar">
+            <div class="overflow-x-auto font-medium text-gray-500 text-sm text-center no-scrollbar mt-6 md:mt-8">
                 <ul class="flex justify-start items-center whitespace-nowrap">
                     <li class="me-3">
-                        <a href="#" class="inline-block py-3 pr-4 hover:border-gray-300 border-transparent border-b-2 rounded-t-lg
-                            h-12 hover:text-gray-600 dark:hover:text-gray-300">
-                            Semua Kelas</a>
+                        <a href="#"
+                            class="inline-block py-3 pr-4 border-[#F64920] border-b-5 rounded-t-lg h-12 text-[#F64920] active"
+                            aria-current="page">Semua</a>
                     </li>
                     <li class="me-3">
-                        <a href="#" class="inline-block py-3 pr-4 border-[#F64920] border-b-5 rounded-t-lg
-                            h-12 text-[#F64920] active" aria-current="page">Pemasaran</a>
+                        <a href="#"
+                            class="inline-block py-3 pr-4 hover:border-gray-300 border-transparent border-b-2 rounded-t-lg h-12 hover:text-gray-600 dark:hover:text-gray-300">
+                            Pemasaran</a>
                     </li>
                     <li class="me-3">
                         <a href="#" class="inline-block py-3 pr-4 hover:border-gray-300 border-transparent border-b-2 rounded-t-lg
@@ -75,43 +82,93 @@
                             Pengembangan Diri</a>
                     </li>
                     <li>
-                        <a
-                            class="inline-block py-3 pr-4 rounded-t-lg h-12 text-gray-400 dark:text-gray-500 cursor-not-allowed">Bisnis</a>
+                        <a href="#" class="inline-block py-3 pr-4 hover:border-gray-300 border-transparent border-b-2 rounded-t-lg h-12
+                        hover:text-gray-600 dark:hover:text-gray-300">Bisnis</a>
                     </li>
                 </ul>
             </div>
 
-            <template x-for="item in cards" :key="item">
-                <div
-                    class="flex items-center hover:bg-indigo-100 shadow hover:shadow-lg p-3 hover:rounded hover:scale-105 transition duration-150 ease-in-out transform">
-                    <img class="mr-4 rounded-full w-10 h-10" :src="`${item.profile_image}`" />
-                    <div class="text-sm">
-                        <p class="text-gray-900 leading-none"
-                            x-text="item.employee_name + ' (' + item.employee_age + ')'"></p>
-                        <p class="text-gray-600" x-text="'$'+item.employee_salary/100"></p>
+            <div class="flex flex-col lg:grid lg:grid-cols-3 flex-wrap pt-8 mx-auto gap-5 lg:gap-x-6 lg:gap-y-8"
+                x-data="{cards: cardInfo}">
+                <template x-for="item in cards" :key="item">
+                    <div
+                        class="flex flex-col gap-2 shadow hover:bg-indigo-100 hover:shadow-lg hover:rounded hover:cursor-pointer transition duration-150 ease-in-out transform hover:scale-105 p-5">
+                        <div class="flex flex-row gap-3 lg:flex-col items-center lg:items-stretch lg:gap-4">
+                            <img class="w-20 h-20 lg:w-full lg:h-full object-cover rounded-md lg:m-0"
+                                :src="`${item.card_image}`" alt="Card Image">
+                            <div class="flex flex-col gap-1.5">
+                                <h3 class="font-[Poppins] font-medium text-lg tracking-tight leading-[120%] lg:mb-2"
+                                    x-text="item.title">
+                                </h3>
+                                <p class="hidden lg:block" x-text="item.description"></p>
+                                <div class="inline-flex items-center lg:mt-3">
+                                    <img class="w-10 h-10 rounded-[10px] mr-2" :src="`${item.profile_image}`" />
+                                    <div class="text-sm flex-col items-center">
+                                        <p class="text-gray-900 leading-none" x-text="item.instructor_name"></p>
+                                        <p class="text-gray-600" x-text="item.instructor_profession"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex w-full justify-between">
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-yellow-300 me-1" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <svg class="w-4 h-4 text-gray-300 me-1 dark:text-gray-500" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                    <path
+                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                </svg>
+                                <p class="ms-1 text-sm font-medium text-gray-500">4.1</p>
+                                <p class="ms-1 text-sm font-medium text-gray-500">(83)</p>
+                            </div>
+                            <h3 class="font-[Poppins] font-medium text-lg text-[#3ECF4C]" x-data="{price: item.course_price, formattedPrice()
+                                    {return this.price >= 1000 ? (this.price/1000).toFixed(0) + 'K' : this.price}}"
+                                x-text="`Rp ${formattedPrice()}`">
+                            </h3>
+                        </div>
                     </div>
-                </div>
-            </template>
+                </template>
+            </div>
+
         </div>
 
         <div id="newsletter"
             class="inline-flex flex-col justify-center items-center self-stretch bg-newsletter shadow-[0px_12px_45px_-10px_rgba(0,59,222,0.20)] mx-auto my-7 px-5 py-6 lg:py-17 rounded-md w-full max-w-[1200px] h-auto overflow-hidden font-[Poppins]">
             <div class="flex flex-col justify-center items-center self-stretch gap-10">
-                <div class="flex flex-col justify-center items-center self-stretch gap-1">
+                <div class="flex flex-col lg:w-[525px] justify-center items-center self-center gap-1">
                     <h2
-                        class="justify-start self-stretch font-medium text-stone-300 text-base text-center leading-snug tracking-tight">
+                        class="lg:text-[18px] justify-start self-stretch font-medium text-stone-300 text-base text-center leading-snug tracking-tight">
                         NEWSLETTER</h2>
                     <div class="flex flex-col justify-center items-center self-stretch gap-2.5">
                         <h2
-                            class="justify-start self-stretch font-['Poppins'] font-semibold text-white text-2xl text-center leading-relaxed">
+                            class="justify-start self-stretch font-['Poppins'] font-semibold text-white text-2xl lg:text-[32px] text-center leading-relaxed">
                             Mau Belajar Lebih Banyak?</h2>
                         <p
-                            class="justify-start self-stretch font-dm-sans text-[#F4F5FA] text-sm/6 text-center tracking-[.1px]">
+                            class="justify-start self-stretch font-dm-sans text-[#F4F5FA] text-sm/6 lg:text-base text-center tracking-[.1px]">
                             Daftarkan dirimu untuk mendapatkan informasi terbaru dan penawaran spesial dari
                             program-program terbaik harisenin.com</p>
                     </div>
                 </div>
-                <div class="flex flex-col justify-start items-center gap-4 size-">
+                <div class="flex flex-col justify-start items-center gap-4 lg:hidden">
                     <div class="inline-flex justify-between items-center bg-white py-2.5 pr-2 pl-3 rounded-[10px] w-72">
                         <div class="justify-center font-normal text-zinc-800/70 text-sm leading-tight tracking-tight">
                             Masukkan Emailmu</div>
@@ -125,65 +182,139 @@
                         </div>
                     </div>
                 </div>
+                <div
+                    class="hidden lg:flex items-center w-full lg:max-w-lg bg-white text-base font-dm-sans tracking-wide rounded-xl shadow-sm border border-gray-200 p-1.5 overflow-hidden">
+                    <input type="email" name="email" id="email_subscribe" placeholder="Masukkan Emailmu"
+                        class="flex-1 px-4 py-2 bg-transparent border-0 focus:ring-0 focus:outline-none text-gray-900 placeholder:text-gray-500" />
+                    <button type="submit"
+                        class="bg-[#FFBD3A] hover:bg-amber-500 text-white font-semibold rounded-xl px-6 py-2 transition duration-150 ease-in-out whitespace-nowrap">
+                        Subscribe
+                    </button>
+                </div>
             </div>
         </div>
     </main>
 
 
-    <footer class="flex flex-col mx-5 my-5">
-        <div class="flex flex-col self-stretch bg-white text-[#222325]">
-            <div class="flex flex-col self-stretch gap-4">
-                <div class="flex flex-col justify-center self-stretch gap-2.5">
-                    <img src="./assets/Logo Assets/Logo.png" alt="Logo Videobelajar" class="w-38 h-10 object-contain">
-                    <h5 class="justify-start self-stretch font-['Poppins'] font-semibold text-sm leading-relaxed">
-                        Gali Potensi Anda Melalui Pembelajaran Video di hariesok.id!</h5>
-                    <p class="justify-start self-stretch font-dm-sans text-sm/6 tracking-[.1px]">
-                        Jl. Usman Effendi No. 50 Lowokwaru, Malang <br> +62 813-2222-3333</p>
+    <footer class="flex flex-col bg-white w-full">
+        <div class="w-full max-w-[1200px] mx-auto px-5 py-5 lg:px-8 lg:py-15">
+            <div class="flex flex-col self-stretch text-[#222325]">
+                <div class="flex flex-col self-stretch gap-4 lg:gap-8 lg:flex-row lg:justify-between">
+                    <div class="flex flex-col justify-center self-stretch gap-2.5 lg:gap-4 lg:py-8">
+                        <img src="./assets/Logo Assets/Logo.png" alt="Logo Videobelajar"
+                            class="w-38 h-10 lg:w-[230px] lg:h-[60px] object-contain">
+                        <h5
+                            class="justify-start self-stretch font-['Poppins'] font-semibold text-sm lg:text-[18px] lg:leading-normal lg:w-[352px] leading-relaxed">
+                            Gali Potensi Anda Melalui Pembelajaran Video di hariesok.id!</h5>
+                        <p class="justify-start self-stretch font-dm-sans text-sm/6 lg:text-base tracking-[.1px]">
+                            Jl. Usman Effendi No. 50 Lowokwaru, Malang <br> +62 813-2222-3333</p>
+                    </div>
+                    <div class="flex flex-col self-stretch gap-4 lg:justify-around font-open-sans tracking-wider">
+                        <ul id="footer-menu-mobile"
+                            class="flex flex-col justify-between self-stretch gap-3 font-bold text-[16px] lg:hidden">
+                            <!-- FOOTER MENU MOBILE -->
+                            <li>
+                                <div class="flex flex-row justify-between">
+                                    <p>Perusahaan</p>
+                                    <img src="./assets/Icon Assets (Mobile)/Material Icon Arrow.svg" alt="Icon Arrow">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex flex-row justify-between">
+                                    <p>Perusahaan</p>
+                                    <img src="./assets/Icon Assets (Mobile)/Material Icon Arrow.svg" alt="Icon Arrow">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex flex-row justify-between">
+                                    <p>Komunitas</p>
+                                    <img src="./assets/Icon Assets (Mobile)/Material Icon Arrow.svg" alt="Icon Arrow">
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- FOOTER MENU TABLET & DESKTOP -->
+                        <div class="mx-auto w-full max-w-screen-xl hidden lg:block font-dm-sans text-base">
+                            <div class="grid grid-cols-3 gap-12 px-4 py-11">
+                                <div>
+                                    <h2 class="mb-4 font-semibold text-[#222325]">Kategori
+                                    </h2>
+                                    <ul class="flex flex-col text-[#333333]/70 font-medium gap-2.5">
+                                        <li>
+                                            <a href="#" class=" hover:underline">Digital & Teknologi</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="hover:underline">Pemasaran</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="hover:underline">Manajemen Bisnis</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="hover:underline">Pengembangan Diri</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="hover:underline">Desain</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h2 class="mb-4 font-semibold text-[#222325]">Perusahaan</h2>
+                                    <ul class="flex flex-col text-[#333333]/70 font-medium gap-2.5">
+                                        <li>
+                                            <a href="#" class="hover:underline">Tentang Kami</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="hover:underline">FAQ</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="hover:underline">Kebijakan Privasi</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="hover:underline">Ketentuan Layanan</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="hover:underline">Bantuan</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h2 class="mb-4 font-semibold text-[#222325]">Komunitas
+                                    </h2>
+                                    <ul class="flex flex-col text-[#333333]/70 font-medium gap-2.5">
+                                        <li>
+                                            <a href="#" class="hover:underline">Tips Sukses</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="hover:underline">Blog</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex flex-col self-stretch gap-4 font-open-sans font-bold text-[16px] tracking-wider">
-                    <ul class="flex flex-col justify-between self-stretch gap-3">
-                        <li>
-                            <div class="flex flex-row justify-between">
-                                <p>Perusahaan</p>
-                                <img src="./assets/Icon Assets (Mobile)/Material Icon Arrow.svg" alt="Icon Arrow">
-                            </div>
+            </div>
+            <hr class="bg-[#3A3541] opacity-12 my-4 border-0 w-full h-px opa">
+            <div class="flex flex-col self-stretch gap-4 lg:flex-row-reverse lg:justify-between lg:items-center">
+                <div>
+                    <ul class="flex flex-row self-stretch gap-3">
+                        <li><img src="assets/Footer Icons Assets/Icon Footer VideoBelajar - SVG/Group 3589.svg" alt="">
                         </li>
-                        <li>
-                            <div class="flex flex-row justify-between">
-                                <p>Perusahaan</p>
-                                <img src="./assets/Icon Assets (Mobile)/Material Icon Arrow.svg" alt="Icon Arrow">
-                            </div>
+                        <li><img src="assets/Footer Icons Assets/Icon Footer VideoBelajar - SVG/Group 3591.svg" alt="">
                         </li>
-                        <li>
-                            <div class="flex flex-row justify-between">
-                                <p>Komunitas</p>
-                                <img src="./assets/Icon Assets (Mobile)/Material Icon Arrow.svg" alt="Icon Arrow">
-                            </div>
+                        <li><img src="assets/Footer Icons Assets/Icon Footer VideoBelajar - SVG/Group 3592.svg" alt="">
+                        </li>
+                        <li><img src="assets/Footer Icons Assets/Icon Footer VideoBelajar - SVG/Group 3593.svg" alt="">
                         </li>
                     </ul>
                 </div>
+                <p class="opacity-68 font-dm-sans text-[#333333] text-[16px]/7 tracking-[.1px]">@2025 Gerobak
+                    Sayur All
+                    Rights
+                    Reserved.</p>
             </div>
-        </div>
-        <hr class="bg-[#3A3541] opacity-12 my-4 border-0 w-full h-px opa">
-        <div class="flex flex-col self-stretch gap-4">
-            <div>
-                <ul class="flex flex-row self-stretch gap-3">
-                    <li><img src="assets/Footer Icons Assets/Icon Footer VideoBelajar - SVG/Group 3589.svg" alt="">
-                    </li>
-                    <li><img src="assets/Footer Icons Assets/Icon Footer VideoBelajar - SVG/Group 3591.svg" alt="">
-                    </li>
-                    <li><img src="assets/Footer Icons Assets/Icon Footer VideoBelajar - SVG/Group 3592.svg" alt="">
-                    </li>
-                    <li><img src="assets/Footer Icons Assets/Icon Footer VideoBelajar - SVG/Group 3593.svg" alt="">
-                    </li>
-                </ul>
-            </div>
-            <p class="opacity-68 font-dm-sans text-[#333333] text-[16px]/7 tracking-[.1px]">@2025 Gerobak Sayur All
-                Rights
-                Reserved.</p>
         </div>
     </footer>
-    <script src=""></script>
+    <script src="js/cards.js"></script>
 </body>
 
 </html>

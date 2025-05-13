@@ -6,7 +6,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/men/1.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-01.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '2',
@@ -15,7 +18,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/men/2.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '3',
@@ -24,7 +30,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/men/3.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-03.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '4',
@@ -33,7 +42,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/men/4.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-04.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '5',
@@ -42,7 +54,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/women/5.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-05.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '6',
@@ -51,7 +66,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/women/6.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '7',
@@ -60,7 +78,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/men/7.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '8',
@@ -70,7 +91,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/women/8.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '9',
@@ -79,7 +103,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/women/9.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '10',
@@ -88,7 +115,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/women/10.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '11',
@@ -97,7 +127,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/women/11.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '12',
@@ -106,7 +139,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/men/12.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '13',
@@ -115,7 +151,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/women/12.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '14',
@@ -124,7 +163,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/women/14.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '15',
@@ -133,7 +175,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/women/15.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '16',
@@ -142,7 +187,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/men/16.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '17',
@@ -151,7 +199,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/men/17.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '18',
@@ -160,7 +211,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/women/18.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '19',
@@ -169,7 +223,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/men/19.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '20',
@@ -178,7 +235,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/men/20.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '21',
@@ -187,7 +247,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/women/21.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '22',
@@ -196,7 +259,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/men/22.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '23',
@@ -205,7 +271,10 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/men/23.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
   {
     id: '24',
@@ -214,6 +283,9 @@ const cardInfo = [
     course_price: '300000',
     instructor_profession: 'Senior Accountant',
     profile_image: 'https://randomuser.me/api/portraits/women/24.jpg',
-    card_image: '',
+    card_image:
+      './assets/Desktop Assets/Homepage Desktop/big-4-auditor-financial-analyst-02.png',
+    description:
+      'Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik.',
   },
 ];

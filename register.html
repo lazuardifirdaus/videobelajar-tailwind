@@ -7,34 +7,22 @@
     <title>Videobelajar</title>
     <link rel="stylesheet" href="./src/output.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://kit.fontawesome.com/6b5df353ac.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="flex flex-col bg-[#FFFDF3]">
-    <header class="top-0 z-50 sticky flex items-center bg-white shadow-md w-full h-auto">
+<body class="bg-[#FFFDF3] min-h-screen flex flex-col">
+    <header class="z-50 sticky flex items-center bg-white shadow-md w-full h-auto">
         <div class="flex justify-between items-center mx-6 my-4 w-full">
             <!-- LOGO -->
             <img src="./assets/Logo Assets/Logo.png" alt="Logo Videobelajar" class="w-38 h-10 object-contain">
-
-            <!-- Menu (Hamburger Icon) -->
-            <button>
-                <img src="./assets/Icon Assets (Mobile)/Material Icon.svg" alt="Header Menu">
-            </button>
-
-            <!-- Kategori & Foto Profil (Desktop) -->
-            <div class="hidden md:flex items-end gap-4">
-                <nav>
-                    <ul class="flex gap-4">
-                        <li>Kategori</li>
-                        <li><img src="./assets/Logo Assets/Foto Profil.png" alt=""></li>
-                    </ul>
-                </nav>
-            </div>
         </div>
     </header>
 
-    <main class="flex flex-col mx-5">
-        <div id="login"
-            class="inline-flex flex-col justify-center items-center self-stretch bg-white shadow-[0px_12px_45px_-10px_rgba(0,59,222,0.20)] mx-auto my-7 px-5 py-6 lg:py-17 rounded-md w-full max-w-[1200px] h-auto overflow-hidden font-dm-sans text-[#222325]/75">
+    <main class="flex-grow flex justify-center items-center px-5 lg:px-10 xl:px-20 py-5 overflow-auto">
+
+        <div id="login" class="flex flex-col justify-center items-center bg-white shadow-[0px_12px_45px_-10px_rgba(0,59,222,0.20)]
+                mx-auto px-5 lg:px-9  py-5 sm:py-4 md:py-6 lg:py-8   rounded-md w-full max-w-[600px] h-auto font-dm-sans text-[#222325]/75
+                gap-4 sm:gap-5 md:gap-6 lg:gap-8">
             <div class="flex flex-col justify-center items-center self-stretch gap-1">
                 <h2
                     class="justify-start self-stretch font-['Poppins'] font-semibold text-[#222325] text-2xl text-center leading-relaxed">
@@ -42,14 +30,14 @@
                 <p class="justify-start self-stretchfont-dm-sans text-sm text-center">
                     Yuk, daftarkan akunmu sekarang juga!</p>
             </div>
-            <div class="sm:mx-auto mt-5 sm:w-full sm:max-w-sm">
-                <form class="space-y-3" action="#" method="POST">
+            <div class="w-full max-w-lg">
+                <form class="flex flex-col space-y-3" action="#" method="POST">
                     <div>
                         <label for="fullname" class="block font-medium text-sm/6">Nama Lengkap <span
                                 class="text-red-500">*</span></label>
                         <div class="mt-2">
                             <input type="text" name="fullname" id="fullname" autocomplete="fullname" required class="h-12 bg-white px-3 py-1.5 rounded-md outline-1 outline-gray-300 focus:outline-2 focus:outline-indigo-600
-                                -outline-offset-1 focus:-outline-offset-2 w-full placeholder:text-gray-400 text-base">
+                                -outline-offset-1 focus:-outline-offset-2 w-full text-[#222325] text-base">
                         </div>
                     </div>
 
@@ -58,34 +46,101 @@
                                 class="text-red-500">*</span></label>
                         <div class="mt-2">
                             <input type="email" name="email" id="email" autocomplete="email" required class="h-12 bg-white px-3 py-1.5 rounded-md outline-1 outline-gray-300 focus:outline-2 focus:outline-indigo-600
-                                -outline-offset-1 focus:-outline-offset-2 w-full placeholder:text-gray-400 text-base">
+                                -outline-offset-1 focus:-outline-offset-2 w-full text-[#222325] text-base">
                         </div>
                     </div>
 
                     <div>
-                        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900">Jenis Kelamin <span
+                        <label for="countries" class="block mb-2 text-sm font-medium">Jenis Kelamin <span
                                 class="text-red-500">*</span></label>
-                        <select id="countries"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
-                            <option selected>Choose a country</option>
-                            <option value="US">United States</option>
-                            <option value="CA">Canada</option>
-                            <option value="FR">France</option>
-                            <option value="DE">Germany</option>
-                        </select>
+                        <div class="relative">
+                            <select id="countries"
+                                class="h-12.5 appearance-none bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-3 py-1.5">
+                                <option selected value="laki-laki">Laki-laki</option>
+                                <option value="perempuan">Perempuan</option>
+                            </select>
+                            <div
+                                class="absolute inset-y-0 right-1 flex items-center pr-3 pointer-events-none text-gray-400">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gap-3">
+                        <label for="country-code-select-input" class="block mb-2 text-sm font-medium">
+                            No. Hp <span class="text-red-500">*</span>
+                        </label>
+
+                        <div class="flex space-x-2">
+                            <div class="relative w-[40%] md:w-[30%] mr-3" id="custom-country-select">
+                                <div
+                                    class="flex items-center h-10 md:h-11 bg-white border border-gray-300 rounded-md shadow-sm overflow-hidden pointer-events-none">
+                                    <div
+                                        class="bg-gray-100 px-2 sm:px-3 h-full flex items-center border-r border-gray-300 overflow-hidden">
+                                        <span id="selected-flag-display"
+                                            class="inline-block h-6 w-9 sm:h-[26px] sm:w-[33px] overflow-hidden"
+                                            aria-hidden="true">
+                                        </span>
+                                    </div>
+                                    <div
+                                        class="flex items-center gap-1 px-3 md:justify-around md:px-5 md:min-w-[90px] min-w-[80px]">
+                                        <span id="selected-code-display"
+                                            class="text-neutral-800 text-sm whitespace-nowrap">
+                                        </span>
+                                        <svg class="h-4 w-4 text-gray-500 flex-shrink-0 xs:h-5 xs:w-5"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                            aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 01.02-1.06z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <select id="country-code-select-input" name="country_code"
+                                    aria-label="Pilih kode negara"
+                                    class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+                                    <option value="+62" data-flag-id="indonesia" selected>Indonesia (+62)</option>
+                                    <option value="+1" data-flag-id="usa">Amerika Serikat (+1)</option>
+                                    <option value="+44" data-flag-id="uk">Inggris Raya (+44)</option>
+                                    <option value="+81" data-flag-id="japan">Jepang (+81)</option>
+                                </select>
+                            </div>
+
+                            <div class="relative flex-1">
+                                <input type="tel" id="phone" name="phone"
+                                    class="block w-full h-11 sm:h-10 px-3 py-2 text-sm text-gray-900 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                                    placeholder="Nomor Telepon">
+                            </div>
+                        </div>
                     </div>
 
                     <div>
                         <div class="flex justify-between items-center">
-                            <label for="password" class="block font-medium text-sm/6">Password <span
+                            <label for="password" class="block font-medium text-sm/6">Kata Sandi <span
                                     class="text-red-500">*</span></label>
                         </div>
                         <div class="mt-2">
                             <input type="password" name="password" id="password" autocomplete="current-password"
-                                required class="h-12 bg-white px-3 py-1.5 rounded-md outline-1 outline-gray-300 focus:outline-2 focus:outline-indigo-600
-                                -outline-offset-1 focus:-outline-offset-2 w-full placeholder:text-gray-400 text-base">
+                                required
+                                class="h-12 bg-white px-3 py-1.5 rounded-md outline-1 outline-gray-300 focus:outline-2 focus:outline-indigo-600
+                                                    -outline-offset-1 focus:-outline-offset-2 w-full text-[#222325] text-base">
                         </div>
                     </div>
+
+                    <div>
+                        <div class="flex justify-between items-center">
+                            <label for="password" class="block font-medium text-sm/6">Konfirmasi Kata Sandi <span
+                                    class="text-red-500">*</span></label>
+                        </div>
+                        <div class="mt-2">
+                            <input type="password" name="password" id="password" autocomplete="current-password"
+                                required
+                                class="h-12 bg-white px-3 py-1.5 rounded-md outline-1 outline-gray-300 focus:outline-2 focus:outline-indigo-600
+                                                                        -outline-offset-1 focus:-outline-offset-2 w-full text-[#222325] text-base">
+                        </div>
+                    </div>
+
 
                     <div class="mb-6 text-sm text-right">
                         <a href="#" class="hover:text-indigo-500">Lupa
@@ -121,6 +176,69 @@
         </div>
     </main>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const selectInput = document.getElementById('country-code-select-input');
+            const flagDisplay = document.getElementById('selected-flag-display');
+            const codeDisplay = document.getElementById('selected-code-display');
+
+            const flagSvgs = {
+                'indonesia': `
+                <svg viewBox="0 0 24 12.4453" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full" preserveAspectRatio="xMidYMid slice">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V6.22265H0V0Z" fill="#E70011" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.22266H24V12.4453H0V6.22266Z" fill="white" />
+                </svg>`,
+                'usa': `
+                <svg viewBox="0 0 72 39" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full" preserveAspectRatio="xMidYMid slice">
+                    <path d="M0 0H72V39H0V0Z" fill="#BF0A30"/>
+                    <path d="M0 3H72V6H0V3Z" fill="white"/>
+                    <path d="M0 9H72V12H0V9Z" fill="white"/>
+                    <path d="M0 15H72V18H0V15Z" fill="white"/>
+                    <path d="M0 21H72V24H0V21Z" fill="white"/>
+                    <path d="M0 27H72V30H0V27Z" fill="white"/>
+                    <path d="M0 33H72V36H0V33Z" fill="white"/>
+                    <path d="M0 0H30V21H0V0Z" fill="#002868"/>
+                    <g fill="white">
+                        <path d="m6 1.75 0.45 1.4H7.9L6.725 4.1l0.45 1.4L6 4.55 4.825 5.5l0.45-1.4L4.1 3.15h1.45L6 1.75ZM12 1.75l0.45 1.4H13.9L12.725 4.1l0.45 1.4L12 4.55l-1.175 0.95 0.45-1.4L10.1 3.15h1.45L12 1.75ZM18 1.75l0.45 1.4H19.9L18.725 4.1l0.45 1.4L18 4.55l-1.175 0.95 0.45-1.4L16.1 3.15h1.45L18 1.75ZM24 1.75l0.45 1.4H25.9L24.725 4.1l0.45 1.4L24 4.55l-1.175 0.95 0.45-1.4L22.1 3.15h1.45L24 1.75Z"/>
+                        <path d="m3 5.15 0.45 1.4H4.9L3.725 7.5l0.45 1.4L3 7.95 1.825 8.9l0.45-1.4L1.1 6.55h1.45L3 5.15ZM9 5.15l0.45 1.4H10.9L9.725 7.5l0.45 1.4L9 7.95 7.825 8.9l0.45-1.4L7.1 6.55h1.45L9 5.15ZM15 5.15l0.45 1.4H16.9L15.725 7.5l0.45 1.4L15 7.95l-1.175 0.95 0.45-1.4L13.1 6.55h1.45L15 5.15ZM21 5.15l0.45 1.4H22.9L21.725 7.5l0.45 1.4L21 7.95l-1.175 0.95 0.45-1.4L19.1 6.55h1.45L21 5.15Z"/>
+                        <path d="m6 8.55 0.45 1.4H7.9L6.725 10.9l0.45 1.4L6 11.35l-1.175 0.95 0.45-1.4L4.1 9.95h1.45L6 8.55ZM12 8.55l0.45 1.4H13.9L12.725 10.9l0.45 1.4L12 11.35l-1.175 0.95 0.45-1.4L10.1 9.95h1.45L12 8.55ZM18 8.55l0.45 1.4H19.9L18.725 10.9l0.45 1.4L18 11.35l-1.175 0.95 0.45-1.4L16.1 9.95h1.45L18 8.55ZM24 8.55l0.45 1.4H25.9L24.725 10.9l0.45 1.4L24 11.35l-1.175 0.95 0.45-1.4L22.1 9.95h1.45L24 8.55Z"/>
+                        <path d="m3 11.95 0.45 1.4H4.9L3.725 14.3l0.45 1.4L3 14.75l-1.175 0.95 0.45-1.4L1.1 13.35h1.45L3 11.95ZM9 11.95l0.45 1.4H10.9L9.725 14.3l0.45 1.4L9 14.75 7.825 15.7l0.45-1.4L7.1 13.35h1.45L9 11.95ZM15 11.95l0.45 1.4H16.9L15.725 14.3l0.45 1.4L15 14.75l-1.175 0.95 0.45-1.4L13.1 13.35h1.45L15 11.95ZM21 11.95l0.45 1.4H22.9L21.725 14.3l0.45 1.4L21 14.75l-1.175 0.95 0.45-1.4L19.1 13.35h1.45L21 11.95Z"/>
+                        <path d="m6 15.35 0.45 1.4H7.9L6.725 17.7l0.45 1.4L6 18.15l-1.175 0.95 0.45-1.4L4.1 16.75h1.45L6 15.35ZM12 15.35l0.45 1.4H13.9L12.725 17.7l0.45 1.4L12 18.15l-1.175 0.95 0.45-1.4L10.1 16.75h1.45L12 15.35ZM18 15.35l0.45 1.4H19.9L18.725 17.7l0.45 1.4L18 18.15l-1.175 0.95 0.45-1.4L16.1 16.75h1.45L18 15.35Z"/>
+                    </g>
+                </svg>`,
+                'uk': `
+                <svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg" class="w-full h-full" preserveAspectRatio="xMidYMid slice">
+                    <clipPath id="uk-clip"><path d="M0 0v30h60V0z"/></clipPath>
+                    <path d="M0 0v30h60V0z" fill="#012169"/>
+                    <path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6" clip-path="url(#uk-clip)"/>
+                    <path d="M0 0l60 30m0-30L0 30" stroke="#C8102E" stroke-width="4" clip-path="url(#uk-clip)"/>
+                    <path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10" clip-path="url(#uk-clip)"/>
+                    <path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6" clip-path="url(#uk-clip)"/>
+                </svg>`,
+                'japan': `
+                <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" class="w-full h-full" preserveAspectRatio="xMidYMid slice">
+                    <rect fill="#fff" height="600" width="900"/>
+                    <circle fill="#bc002d" cx="450" cy="300" r="180"/>
+                </svg>`
+            };
+
+            function updateDisplay() {
+                const selectedOption = selectInput.options[selectInput.selectedIndex];
+                const flagId = selectedOption.dataset.flagId;
+                const countryCode = selectedOption.value;
+
+                codeDisplay.textContent = countryCode;
+                if (flagSvgs[flagId]) {
+                    flagDisplay.innerHTML = flagSvgs[flagId];
+                } else {
+                    flagDisplay.innerHTML = flagSvgs['indonesia']; // Default
+                }
+            }
+
+            updateDisplay();
+            selectInput.addEventListener('change', updateDisplay);
+        });
+    </script>
 </body>
 
 </html>

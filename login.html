@@ -9,47 +9,35 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body class="flex flex-col bg-[#FFFDF3]">
+<body class="bg-[#FFFDF3] min-h-screen flex flex-col">
+
     <header class="top-0 z-50 sticky flex items-center bg-white shadow-md w-full h-auto">
         <div class="flex justify-between items-center mx-6 my-4 w-full">
-            <!-- LOGO -->
             <img src="./assets/Logo Assets/Logo.png" alt="Logo Videobelajar" class="w-38 h-10 object-contain">
-
-            <!-- Menu (Hamburger Icon) -->
-            <button>
-                <img src="./assets/Icon Assets (Mobile)/Material Icon.svg" alt="Header Menu">
-            </button>
-
-            <!-- Kategori & Foto Profil (Desktop) -->
-            <div class="hidden md:flex items-end gap-4">
-                <nav>
-                    <ul class="flex gap-4">
-                        <li>Kategori</li>
-                        <li><img src="./assets/Logo Assets/Foto Profil.png" alt=""></li>
-                    </ul>
-                </nav>
-            </div>
         </div>
     </header>
 
-    <main class="flex flex-col mx-5">
-        <div id="login"
-            class="inline-flex flex-col justify-center items-center self-stretch bg-white shadow-[0px_12px_45px_-10px_rgba(0,59,222,0.20)] mx-auto my-7 px-5 py-6 lg:py-17 rounded-md w-full max-w-[1200px] h-auto overflow-hidden font-dm-sans text-[#222325]/75">
+    <main class="flex-grow flex justify-center items-center px-5 lg:px-10 xl:px-20 py-5 overflow-auto">
+
+        <div id="login" class="flex flex-col justify-center items-center bg-white shadow-[0px_12px_45px_-10px_rgba(0,59,222,0.20)]
+            mx-auto px-5 lg:px-9  py-5 sm:py-4 md:py-6 lg:py-8   rounded-md w-full max-w-[600px] h-auto font-dm-sans text-[#222325]/75
+            gap-4 sm:gap-5 md:gap-6 lg:gap-8">
             <div class="flex flex-col justify-center items-center self-stretch gap-1">
                 <h2
                     class="justify-start self-stretch font-['Poppins'] font-semibold text-[#222325] text-2xl text-center leading-relaxed">
                     Masuk ke Akun</h2>
-                <p class="justify-start self-stretchfont-dm-sans text-sm text-center">
+                <p class="justify-start self-stretch font-dm-sans text-sm text-center">
                     Yuk, lanjutin belajarmu di videobelajar.</p>
             </div>
-            <div class="sm:mx-auto mt-5 sm:w-full sm:max-w-sm">
-                <form class="space-y-3" action="#" method="POST">
+
+            <div class="w-full max-w-lg">
+                <form class="flex flex-col space-y-3" action="#" method="POST">
                     <div>
                         <label for="email" class="block font-medium text-sm/6">E-Mail <span
                                 class="text-red-500">*</span></label>
                         <div class="mt-2">
                             <input type="email" name="email" id="email" autocomplete="email" required class="h-12 bg-white px-3 py-1.5 rounded-md outline-1 outline-gray-300 focus:outline-2 focus:outline-indigo-600
-                                -outline-offset-1 focus:-outline-offset-2 w-full placeholder:text-gray-400 text-base">
+                                -outline-offset-1 focus:-outline-offset-2 w-full text-[#222325] text-base">
                         </div>
                     </div>
 
@@ -61,7 +49,7 @@
                         <div class="mt-2">
                             <input type="password" name="password" id="password" autocomplete="current-password"
                                 required class="h-12 bg-white px-3 py-1.5 rounded-md outline-1 outline-gray-300 focus:outline-2 focus:outline-indigo-600
-                                -outline-offset-1 focus:-outline-offset-2 w-full placeholder:text-gray-400 text-base">
+                                -outline-offset-1 focus:-outline-offset-2 w-full text-[#222325] text-base">
                         </div>
                     </div>
 
@@ -71,11 +59,11 @@
                     </div>
 
                     <div id="buttons" class="space-y-4 tracking-wide">
-                        <button type="submit" class="flex justify-center bg-[#3ECF4C] hover:bg-indigo-500 shadow-xs px-3
+                        <button type="submit" class="flex justify-center bg-[#3ECF4C] cursor-pointer shadow-xs px-3
                             h-10 py-1.5 rounded-2xl focus-visible:outline-2 focus-visible:outline-indigo-600 focus-visible:outline-offset-2
                             w-full font-semibold text-sm/6 text-white items-center">Masuk
                         </button>
-                        <button type="button" class="flex justify-center bg-[#E2FCD9]/80 hover:bg-indigo-500
+                        <button type="button" class="flex justify-center bg-[#E2FCD9]/80 cursor-pointer
                             shadow-xs px-3 h-10 py-1.5 rounded-2xl focus-visible:outline-2 focus-visible:outline-indigo-600 focus-visible:outline-offset-2
                             w-full font-semibold text-sm/6 text-[#3ECF4C] items-center">Daftar
                         </button>
@@ -87,20 +75,17 @@
                     </div>
 
                     <div class="inline-flex items-center justify-center w-full">
-                        <button type="button" class="flex justify-center bg-white border-1 border-[#ebeaea] hover:bg-indigo-500 shadow-xs px-3
+                        <button type="button" class="flex justify-center bg-white border border-[#ebeaea] cursor-pointer shadow-xs px-3 
                             py-1.5 rounded-2xl focus-visible:outline-2 focus-visible:outline-indigo-600 focus-visible:outline-offset-2
-                            w-full font-semibold text-sm/6 text-[#4A505C] gap-2">
+                            w-full font-semibold text-sm/6 text-[#4A505C] gap-2 items-center">
                             <img src="./assets/Icon Assets (Mobile)/logos_google-icon.svg" alt="Logo Google"
                                 class="w-5 h-5 self-center">Masuk dengan Google</button>
                     </div>
-
                 </form>
             </div>
         </div>
     </main>
 
 </body>
-
-</html>
 
 </html>
